@@ -1,1 +1,25 @@
 
+
+
+
+public class FinancialForecast {
+    public static void main(String[] args) {
+        // Example: Expenses for the past 6 months (in rupees)
+        double[] pastExpenses = {12000.50, 13500.75, 12500.00, 14000.25, 13850.00, 13000.00};
+
+        double total = 0;
+        for (double expense : pastExpenses) {
+            total += expense;
+        }
+
+        double average = total / pastExpenses.length;
+
+        System.out.println("Past 6 Months Expenses:");
+        for (int i = 0; i < pastExpenses.length; i++) {
+            System.out.printf("Month %d: ₹%.2f%n", i + 1, pastExpenses[i]);
+        }
+
+        System.out.printf("\nForecasted expense for next month: ₹%.2f%n", average);
+    }
+}
+
