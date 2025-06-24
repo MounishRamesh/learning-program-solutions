@@ -1,1 +1,26 @@
 
+
+
+-- Anonymous PL/SQL block to calculate square of a number and check even/odd
+
+DECLARE
+    input_val     NUMBER := 9;
+    squared_val   NUMBER;
+    is_even_flag  VARCHAR2(3);
+BEGIN
+    -- Determine if the input is even or odd
+    IF MOD(input_val, 2) = 0 THEN
+        is_even_flag := 'Yes';
+    ELSE
+        is_even_flag := 'No';
+    END IF;
+
+    -- Compute the square of the input value
+    squared_val := POWER(input_val, 2);
+
+    -- Display the results
+    DBMS_OUTPUT.PUT_LINE('Input Value      : ' || input_val);
+    DBMS_OUTPUT.PUT_LINE('Square           : ' || squared_val);
+    DBMS_OUTPUT.PUT_LINE('Is Even Number   : ' || is_even_flag);
+END;
+/
