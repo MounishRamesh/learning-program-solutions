@@ -1,0 +1,12 @@
+
+Even Numbers between 1 and 10:
+2
+4
+6
+8
+10
+
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.007
