@@ -1,1 +1,29 @@
 
+// Class to be tested
+class UserUtils {
+    public static boolean isAdult(int age) {
+        return age >= 18;
+    }
+
+    public static String getGreeting(String name) {
+        return "Hello, " + name;
+    }
+}
+
+// JUnit Test class
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class Main {
+
+    @Test
+    void testIsAdult() {
+        assertTrue(UserUtils.isAdult(20));
+        assertFalse(UserUtils.isAdult(16));
+    }
+
+    @Test
+    void testGreeting() {
+        assertEquals("Hello, Monish", UserUtils.getGreeting("Monish"));
+    }
+}
